@@ -27,6 +27,7 @@ public class UserRegistration{
 			System.out.println("Ivalid input. Enter the Email: ");
 			email = sc.next();
 		}
+		
 		sc.nextLine();
 		
 		System.out.println("Enter the Phone Number: ");
@@ -35,5 +36,12 @@ public class UserRegistration{
 			System.out.println("Ivalid input. Enter the Phone Number: ");
 			phone = sc.nextLine();
 		}
+		
+		System.out.println("Enter the Password: ");
+		String password = sc.next();
+		while(!Pattern.matches(".{8,}",password)){
+			System.out.println("Ivalid input. Enter the Password: ");
+			password = sc.nextLine();
+		}	
 	}
 }
